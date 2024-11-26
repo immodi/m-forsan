@@ -66,12 +66,32 @@ h2 {
   position: relative;
 }
 
+.span {
+  color: var(--Very-Dark-Blue);
+}
+
 .heading {
   text-align: center;
   font-size: 2rem;
   color: var(--Very-Dark-Blue);
   margin-top: 10rem;
   margin-bottom: 5rem;
+}
+
+.call-now {
+  color: darkblue;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  transition: all ease 300ms;
+}
+
+.call-now:hover {
+  color: black;
+  transform: scale(1.1);
 }
 
 .heading h1 {
@@ -161,6 +181,10 @@ h2 {
 
 .contact-widget.instgram:hover i {
   color: #e1306c; /* Instagram pink */
+}
+
+.contact-widget.tiktok:hover i {
+  color: purple; /* Instagram pink */
 }
 
 /* Specific Widgets */
