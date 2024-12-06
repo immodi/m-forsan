@@ -187,6 +187,10 @@ h2 {
   color: purple; /* Instagram pink */
 }
 
+.contact-widget.snapchat:hover i {
+  color: yellow; /* snapchat pink */
+}
+
 /* Specific Widgets */
 .contact-widget.phone {
   background: url("phone-icon.png") no-repeat center/contain;
