@@ -7,7 +7,7 @@ export default async (request) => {
       // console.log(TELEGRAM_API_TOKEN);
       console.log(TELEGRAM_CHAT_ID);
       
-      return new Response('Method not allowed', { status: 405 });
+      return new Response(TELEGRAM_CHAT_ID, { status: 405 });
     }
 
     // Parse the incoming JSON body
