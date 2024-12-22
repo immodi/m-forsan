@@ -7,15 +7,15 @@ async function sendUserIP() {
       const userIP = ipData.ip;
   
       // Send the IP to your Netlify function
-      await fetch('/.netlify/functions/send-ip', {
+      const res = await fetch('/.netlify/functions/send-ip', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ ip: userIP }),
       });
-  
-      console.log('IP sent successfully:', userIP);
+      console.log(res.json());
+      
     } catch (error) {
       console.error('Error fetching or sending IP:', error);
     }
