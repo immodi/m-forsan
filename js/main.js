@@ -14,7 +14,6 @@ async function sendUserIP() {
         },
         body: JSON.stringify({ ip: userIP }),
       });
-      console.log(res.json());
       
     } catch (error) {
       console.error('Error fetching or sending IP:', error);
