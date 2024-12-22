@@ -1,7 +1,12 @@
 export default async (request) => {
   try {
+    const TELEGRAM_API_TOKEN = process.env.TELEGRAM_API_TOKEN;
+    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
     // Ensure it's a POST request
     if (request.method !== 'POST') {
+      // console.log(TELEGRAM_API_TOKEN);
+      console.log(TELEGRAM_CHAT_ID);
+      
       return new Response('Method not allowed', { status: 405 });
     }
 
@@ -9,8 +14,7 @@ export default async (request) => {
     const { ip } = await request.json();
 
     // Telegram Bot API token and chat ID
-    const TELEGRAM_API_TOKEN = process.env.TELEGRAM_API_TOKEN;
-    const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+
 
     // Prepare the Telegram API URL
     const telegramApiUrl = `https://api.telegram.org/bot${TELEGRAM_API_TOKEN}/sendMessage`;
